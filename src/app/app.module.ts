@@ -3,10 +3,16 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
+import { HerosectionComponent } from './herosection/herosection.component';
+import { FootercomponentComponent } from './footercomponent/footercomponent.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainHeaderComponent,
+    HerosectionComponent,
+    FootercomponentComponent
   ],
   imports: [
     BrowserModule,
@@ -17,4 +23,4 @@ import { AppComponent } from './app.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

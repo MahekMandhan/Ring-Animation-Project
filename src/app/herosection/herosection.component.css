@@ -1,0 +1,198 @@
+.main {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+
+
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+
+}
+
+.main-content img {
+  height: 75vh;
+  width: 100vw;
+  bottom: -120px;
+  /* Initial position off-screen */
+  animation: moveFromBottom 2s ease-out forwards;
+}
+
+
+
+
+
+@keyframes moveFromBottom {
+  0% {
+    transform: translateY(200px);
+    /* Start below the viewport */
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(80px);
+    /* End at the center */
+    opacity: 1;
+  }
+}
+
+.maintext {
+  position: absolute;
+  /* Positions the text over the image */
+  z-index: 2;
+  /* Ensures the text is on top of the image */
+  text-align: center;
+  font-size: 2.5rem;
+  /* Adjust font size */
+  font-weight: bold;
+  /* Make it stand out */
+  text-shadow:
+    0 4px 6px rgba(255, 0, 242, 0.8),
+    /* Original shadow */
+    0 10px 15px rgba(236, 6, 225, 0.5),
+    /* Larger shadow below */
+    0 20px 30px rgba(153, 0, 153, 0.4);
+  /* Deeper shadow below */
+  letter-spacing: 2px;
+  /* Slight spacing for elegance */
+  text-transform: uppercase;
+  /* Optional for all caps */
+  top: 10%;
+  /* Position the text vertically */
+  right: 0;
+  width: 100%;
+  /* Ensure the text spans the container */
+  animation: zoomIn 4s ease-out forwards;
+  font-family: "Times New Roman", Georgia, "Playfair Display", serif;
+
+  /* Ruby gradient color effect */
+  background: linear-gradient(45deg,
+      rgba(223, 9, 243, 1) 0%,
+      /* Ruby-like purple */
+      rgba(153, 0, 153, 1) 50%,
+      /* Deeper ruby tone */
+      rgba(236, 6, 225, 1) 100%
+      /* Bright magenta */
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0) translateY(200px);
+    /* Start smaller */
+    opacity: 0;
+    /* Fully transparent */
+  }
+
+  50% {
+    opacity: 0.1;
+    /* Semi-transparent during animation */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Normal size */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+.div2 {
+  height: 110vh;
+
+  position: relative;
+  /* Positioning the div relative to enable layering */
+  z-index: 1;
+}
+
+.div2 h1 {
+  font-family: "Times New Roman", Georgia, "Playfair Display", serif;
+  font-size: 9.5vw;
+  /* Use viewport width for dynamic scaling */
+  width: 100%;
+  /* Make sure it spans the entire div */
+  text-transform: uppercase;
+  /* Optional: To make text all uppercase */
+  margin: 0;
+  /* Remove any default margin */
+}
+
+.div2 h1 span {
+  background: linear-gradient(45deg,
+      rgba(223, 9, 243, 1) 0%,
+      /* Ruby-like purple */
+      rgba(153, 0, 153, 1) 50%,
+      /* Deeper ruby tone */
+      rgba(153, 0, 153, 0.4) 100%
+      /* Bright magenta */
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.div3 {
+  height: 110vh;
+  width: 55vw;
+  background-size: cover;
+  /* Make the image cover the whole div */
+  background-position: center;
+  /* Center the image */
+}
+
+
+.main3 {
+  height: 100vh;
+  margin: 0;
+  background: black;
+
+
+}
+
+.ring2 h2{
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-family: "Times New Roman", Georgia, "Playfair Display", serif;
+}
+.ring3 h2{
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-family: "Times New Roman", Georgia, "Playfair Display", serif;
+}
+.ring2 div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.ring3 div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.ring2 div img{
+  height: 50vh;
+}
+.ring3 div img{
+  height: 40vh;
+}
+
