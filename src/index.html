@@ -24,5 +24,30 @@
   integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
   crossorigin="anonymous"
 ></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script></body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+<script>
+document.addEventListener('scroll', function () {
+    const ringImage = document.querySelector('#ring-image');
+    const ringBox = document.querySelector('#ring-box');
+
+    // Get the distance of the ring box from the top of the viewport
+    const ringBoxTop = ringBox.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Trigger the animation when the ring box is in view
+    if (ringBoxTop < windowHeight - 100) {
+        ringImage.style.position = "absolute";
+        ringImage.style.top = ringBox.offsetTop + (ringBox.offsetWidth / 2) - 450 + "px"; // Align vertically
+        ringImage.style.left = ringBox.offsetLeft + (ringBox.offsetWidth / 2) - 400 + "px"; // Center horizontally
+        ringImage.style.width = "100px"; // Shrink width
+        ringImage.style.height = "100px"; // Shrink height
+        ringImage.style.transform = "translate(-50%, 0)"; // Keep it centered
+        ringImage.style.zIndex = "10"; // Ensure it's above other elements
+    }
+});
+
+</script>
+
+</body>
 </html>

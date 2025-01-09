@@ -1,3 +1,9 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main {
   height: 100vh;
   margin: 0;
@@ -5,8 +11,7 @@
   justify-content: center;
   align-items: center;
   background: black;
-
-
+  flex-wrap: wrap; /* Allow items to stack on smaller screens */
 }
 
 .main-content {
@@ -14,16 +19,28 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-
-
 }
 
-.main-content img {
+#ring-image {
   height: 75vh;
-  width: 100vw;
-  bottom: -120px;
-  /* Initial position off-screen */
+  width: 60vw;
   animation: moveFromBottom 2s ease-out forwards;
+  position: absolute;
+  top: -210px; /* Start above the viewport */
+  left: -60px;
+  transform: translate(-50%, 0); 
+  transition: all 2s ease-in-out; /* Smooth transition for position, size, and scale */
+  z-index: 1;
+}
+
+#ring-box {
+  position: relative;
+  height: 110vh;
+  width: 55vw;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
 
@@ -49,42 +66,25 @@
 }
 
 .maintext {
-  position: absolute;
-  /* Positions the text over the image */
+  position: relative;
+  bottom: 190px;
   z-index: 2;
-  /* Ensures the text is on top of the image */
   text-align: center;
   font-size: 2.5rem;
-  /* Adjust font size */
   font-weight: bold;
-  /* Make it stand out */
   text-shadow:
     0 4px 6px rgba(255, 0, 242, 0.8),
-    /* Original shadow */
     0 10px 15px rgba(236, 6, 225, 0.5),
-    /* Larger shadow below */
     0 20px 30px rgba(153, 0, 153, 0.4);
-  /* Deeper shadow below */
   letter-spacing: 2px;
-  /* Slight spacing for elegance */
   text-transform: uppercase;
-  /* Optional for all caps */
-  top: 10%;
-  /* Position the text vertically */
-  right: 0;
   width: 100%;
-  /* Ensure the text spans the container */
   animation: zoomIn 4s ease-out forwards;
   font-family: "Times New Roman", Georgia, "Playfair Display", serif;
-
-  /* Ruby gradient color effect */
   background: linear-gradient(45deg,
       rgba(223, 9, 243, 1) 0%,
-      /* Ruby-like purple */
       rgba(153, 0, 153, 1) 50%,
-      /* Deeper ruby tone */
       rgba(236, 6, 225, 1) 100%
-      /* Bright magenta */
     );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,14 +145,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.div3 {
-  height: 110vh;
-  width: 55vw;
-  background-size: cover;
-  /* Make the image cover the whole div */
-  background-position: center;
-  /* Center the image */
-}
+
 
 
 .main3 {
