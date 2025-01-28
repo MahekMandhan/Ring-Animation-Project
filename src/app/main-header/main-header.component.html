@@ -1,8 +1,10 @@
-<nav
-    class="navbar navbar-expand-sm navbar-dark bg-black"
->
-    <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-black">
+    <div class="container ">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="../../../images/Untitled design.png" height="80" alt="Logo">
+        </a>
+        <!-- Toggler Button -->
         <button
             class="navbar-toggler d-lg-none"
             type="button"
@@ -14,16 +16,15 @@
         >
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Collapsible Content -->
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <!-- Navbar Links Centered -->
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-0 gap-5">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page"
-                        >Home
-                        <span class="visually-hidden">(current)</span></a
-                    >
+                    <a class="nav-link active" href="#" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a
@@ -33,34 +34,20 @@
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
-                        >Dropdown</a
                     >
-                    <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownId"
-                    >
-                        <a class="dropdown-item" href="#"
-                            >Action 1</a
-                        >
-                        <a class="dropdown-item" href="#"
-                            >Action 2</a
-                        >
+                        Collections
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
                     </div>
                 </li>
             </ul>
-            <form class="d-flex my-2 my-lg-0">
-                <input
-                    class="form-control me-sm-2"
-                    type="text"
-                    placeholder="Search"
-                />
-                <button
-                    class="btn btn-outline-success my-2 my-sm-0"
-                    type="submit"
-                >
-                    Search
-                </button>
-            </form>
+            <!-- Search Icon and Contact Button on the Right -->
+            <div class="d-flex align-items-center gap-3">
+                <i class="fa fa-search bg-success text-white p-2 rounded-circle" aria-hidden="true"></i>
+                <button class="btn btn-outline-success" type="submit">Contact Us</button>
+            </div>
         </div>
     </div>
 </nav>
